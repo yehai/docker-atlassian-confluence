@@ -41,7 +41,7 @@ RUN set -x \
     && touch -d "@0"           "${CONF_INSTALL}/conf/server.xml" \
     && chown daemon:daemon     "${JAVA_CACERTS}"
 
-COPY ./${CONF_VERSION}/atlassian-extras-decoder-v2-3.3.0.jar "${JIRA_INSTALL}/confluence/WEB-INF/lib/"
+COPY ./${CONF_VERSION}/atlassian-extras-decoder-v2-3.3.0.jar "${CONF_INSTALL}/confluence/WEB-INF/lib/"
 
 # Use the default unprivileged account. This could be considered bad practice
 # on systems where multiple processes end up being executed by 'daemon' but
